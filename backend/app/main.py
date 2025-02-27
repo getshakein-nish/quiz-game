@@ -7,15 +7,14 @@ app = FastAPI()
 # Set up CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["*"],  # Change this to specific origins if needed
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(user.router, prefix="/api/v1")
 app.include_router(quiz.router, prefix="/api/v1/quiz")
-app.include_router(websockets.router, prefix="/api/v1")
 
 @app.get("/")
 def read_root():

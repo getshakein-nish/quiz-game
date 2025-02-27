@@ -39,7 +39,7 @@ async def login_user(response: Response, user: UserLogin):
         key="access_token",
         value=f"Bearer {access_token}",
         httponly=True,
-        secure=True,  # Set to True if using HTTPS
+        secure=False,  # Set to True if using HTTPS
         samesite="lax"
     )
     return {"access_token": access_token, "token_type": "bearer"}
