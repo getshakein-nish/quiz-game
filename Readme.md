@@ -4,11 +4,13 @@ This is a multiplayer quiz game built with FastAPI and MongoDB.
 
 ## Setup Instructions
 
+**After forking the repository:**
+
 1. **Clone the repository:**
 
 ```
-   git clone https://github.com/getshakein-nish/quiz-game.git
-   cd ai-quiz-game/backend
+   git clone https://github.com/{your-username}/quiz-game.git
+   cd quiz-game/backend
 ```
 
 2. **Create and activate virtual environment inside /backend:**
