@@ -11,10 +11,10 @@ This is a multiplayer quiz game built with FastAPI and MongoDB.
    cd ai-quiz-game/backend
 ```
 
-2. **Create and activate virtual environment:**
+2. **Create and activate virtual environment inside /backend:**
 ```
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source venv/bin/activate for Linux or  # On Windows use `venv\Scripts\activate`
 ```
 
 
@@ -23,11 +23,12 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
-4. **Create .env file**
+4. **Create .env file inside /app**
 
 ```
 MONGODB_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
 JWT_SECRET=your_jwt_secret_key
+GEMINI_API_KEY=your_gemini_api_key
 ```
 
 

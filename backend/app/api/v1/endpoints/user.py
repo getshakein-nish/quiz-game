@@ -2,7 +2,7 @@
 from fastapi import APIRouter, HTTPException, Depends, Response
 from pydantic import BaseModel, EmailStr
 from passlib.context import CryptContext
-from app.models.user import User, UserInDB
+from app.models.user import User, UserInDB, UserCreate, UserLogin
 from app.database import database
 from app.utils import create_access_token
 from app.dependencies import get_current_user
@@ -13,14 +13,6 @@ router = APIRouter()
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-class UserCreate(BaseModel):
-    email: EmailStr
-    username: str
-    password: str
-
-class UserLogin(BaseModel):
-    email: EmailStr
-    password: str
 
 class Token(BaseModel):
     access_token: str
